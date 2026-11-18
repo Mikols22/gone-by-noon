@@ -12,8 +12,8 @@ export const site = {
     "Junk removal in Doylestown and central Bucks County. Book a morning pickup and it's gone by noon. Furniture, appliances, cleanouts and construction debris.",
 
   // Contact — fill these in. Phone: digits only for the links, display for the text.
-  phoneDisplay: "(215) 588-0541",
-  phoneDigits: "2155880541",
+  phoneDisplay: "(215) 688-0541",
+  phoneDigits: "2156880541",
   email: "hello@gonebynoon.co",
   hours: "", // e.g. "Mon–Sat, 7 AM–6 PM" — shown in the footer once filled in
   partnerCompany: "TW Homes",
