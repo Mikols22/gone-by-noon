@@ -21,9 +21,9 @@ export const site = {
   // Pricing section. Single item comes from the price sheet's minimum visit charge.
   prices: {
     single: "From $99",
-    quarter: "From $199",
-    half: "From $349",
-    full: "From $599",
+    quarter: "From $240",
+    half: "From $480",
+    full: "From $680",
   },
 
   // The Noon Guarantee
