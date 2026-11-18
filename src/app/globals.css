@@ -185,3 +185,35 @@ h1, h2, h3, p { margin: 0; }
   .callbar .btn { flex: 1 1 0; }
   body { padding-bottom: 76px; }
 }
+
+/* Inner pages */
+.page-hero { padding: 40px 0 56px; }
+.page-hero .hero-copy { max-width: 760px; }
+.page-hero h1 { font-size: 64px; }
+.crumbs { font-size: 14px; color: #9aa19d; margin-bottom: 28px; }
+.crumbs a { color: #c9cecb; text-decoration: none; }
+.crumbs a:hover { color: var(--green); }
+.card-link { color: inherit; text-decoration: none; }
+.card-link:hover { color: var(--green-dark); text-decoration: underline; }
+.more-links { margin-top: 28px; font-size: 16px; line-height: 1.9; }
+.chip a { color: inherit; text-decoration: none; }
+.chip a:hover { text-decoration: underline; }
+.prose p { font-size: 17px; line-height: 1.7; color: var(--ink-soft); margin-top: 16px; max-width: 720px; }
+.prose h2 + p { margin-top: 18px; }
+.two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 36px; }
+.two-col h3 { font-size: 22px; margin-bottom: 14px; }
+.price-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; }
+.price-table caption { text-align: left; font-family: var(--anton); text-transform: uppercase; font-size: 26px; padding: 0 0 12px; }
+.price-table td { padding: 14px 18px; border-top: 1px solid var(--line); font-size: 16px; }
+.price-table td:last-child { text-align: right; font-weight: 700; white-space: nowrap; }
+.price-tables { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 36px 28px; margin-top: 40px; align-items: start; }
+.link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 28px; padding: 0; list-style: none; }
+.link-grid a { display: block; background: var(--gray); border-radius: 12px; padding: 18px 20px; font-weight: 700; color: var(--charcoal); text-decoration: none; }
+.link-grid a:hover { background: var(--charcoal); color: #fff; }
+.dark .link-grid a { background: var(--charcoal-2); color: #fff; }
+.dark .link-grid a:hover { background: var(--green); color: var(--charcoal); }
+@media (max-width: 760px) {
+  .page-hero h1 { font-size: 44px; }
+  .price-tables { grid-template-columns: 1fr; }
+}
+.gray .card:not(.price-card) { background: #fff; }

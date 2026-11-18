@@ -15,7 +15,9 @@ export const site = {
   phoneDisplay: "(215) 688-0541",
   phoneDigits: "2156880541",
   email: "hello@gonebynoon.co",
-  hours: "", // e.g. "Mon–Sat, 7 AM–6 PM" — shown in the footer once filled in
+  hours: "Mon–Fri, 7 AM–4 PM", // shown in the footer and pages
+  // Same hours for search engines: days use schema.org names, times are 24-hour.
+  openingHours: { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "07:00", closes: "16:00" },
   partnerCompany: "TW Homes",
 
   // Pricing section. Single item comes from the price sheet's minimum visit charge.
