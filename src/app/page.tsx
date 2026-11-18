@@ -42,7 +42,7 @@ const faqs = [
   { q: "What can't you take?", a: "Hazardous materials like paint, chemicals, fuel, propane tanks, asbestos and medical waste." },
   { q: "How does pricing work?", a: "Single items have a set price. Bigger jobs are priced by how much space they take on our trailer. Labor, hauling and disposal are included, and we confirm the price on site before we start." },
   { q: "Do I need to be home?", a: "Not always. If the items are outside or easy to get to, we can handle it while you're out and text you photos when it's done." },
-  { q: "Is it really gone by noon?", a: "Book a morning appointment and we'll have it loaded and gone before lunch." },
+  { q: "Is it really gone by noon?", a: `Yes. ${site.guarantee.text} ${site.guarantee.fine}` },
 ];
 
 const jsonLd = {
@@ -106,10 +106,10 @@ export default function Home() {
                 </a>
               </div>
               <ul className="trust">
+                <li><CheckIcon size={20} /> {site.guarantee.short}</li>
                 <li><CheckIcon size={20} /> Locally owned in Doylestown</li>
                 <li><CheckIcon size={20} /> Upfront, no-surprise pricing</li>
-                <li><CheckIcon size={20} /> Real crew, real trailers</li>
-              </ul>
+                              </ul>
             </div>
             <div id="quote" className="quote-card">
               <QuoteForm />
@@ -184,7 +184,13 @@ export default function Home() {
 
         <section id="about" className="section">
           <div className="wrap split">
-            <div className="photo-slot">[Photo: the crew in front of the trailer]</div>
+            <div className="guarantee">
+              <Logo width={200} background="#1C1F24" />
+              <p className="eyebrow eyebrow-green">The Noon Guarantee</p>
+              <p className="guarantee-head">{site.guarantee.headline}</p>
+              <p className="guarantee-text">{site.guarantee.text}</p>
+              <p className="guarantee-fine">{site.guarantee.fine}</p>
+            </div>
             <div>
               <p className="eyebrow">Why Gone by Noon</p>
               <h2 className="h2">Local guys. Real trucks.</h2>
@@ -202,23 +208,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="work" className="section gray">
-          <div className="wrap">
-            <p className="eyebrow">Before &amp; after</p>
-            <h2 className="h2">See the difference a morning makes.</h2>
-            <div className="grid grid-3">
-              {["Garage cleanout", "Basement cleanout", "Reno debris"].map((label) => (
-                <figure key={label} className="ba">
-                  <div className="ba-pair">
-                    <div className="ba-img"><span className="tag">BEFORE</span></div>
-                    <div className="ba-img after"><span className="tag tag-green">AFTER</span></div>
-                  </div>
-                  <figcaption>[{label}, Town]</figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Before & after — turn back on once there are real job photos (see BeforeAfter in git history) */}
 
         <section id="area" className="section">
           <div className="wrap split">
@@ -273,8 +263,9 @@ export default function Home() {
           <div>
             <p className="footer-head">Contact</p>
             <p><a href={telHref}>{site.phoneDisplay}</a></p>
-            <p>{site.email}</p>
-            <p>{site.hours}</p>
+            {site.email && <p><a href={`mailto:${site.email}`}>{site.email}</a></p>}
+            {site.hours && <p>{site.hours}</p>}
+            <p>Serving central Bucks County</p>
           </div>
           <div>
             <p className="footer-head">Explore</p>

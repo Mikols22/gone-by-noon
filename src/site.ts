@@ -12,18 +12,26 @@ export const site = {
     "Junk removal in Doylestown and central Bucks County. Book a morning pickup and it's gone by noon. Furniture, appliances, cleanouts and construction debris.",
 
   // Contact — fill these in. Phone: digits only for the links, display for the text.
-  phoneDisplay: "[YOUR NUMBER]",
-  phoneDigits: "", // e.g. "2155550123"
-  email: "[YOUR EMAIL]",
-  hours: "[YOUR HOURS]",
-  partnerCompany: "[PARTNER COMPANY]",
+  phoneDisplay: "(215) 588-0541",
+  phoneDigits: "2155880541",
+  email: "", // e.g. "quotes@gonebynoon.co" — shown in the footer once filled in
+  hours: "", // e.g. "Mon–Sat, 7 AM–6 PM" — shown in the footer once filled in
+  partnerCompany: "TW Homes",
 
   // Pricing section. Single item comes from the price sheet's minimum visit charge.
   prices: {
     single: "From $99",
-    quarter: "[PRICE]",
-    half: "[PRICE]",
-    full: "[PRICE]",
+    quarter: "From $199",
+    half: "From $349",
+    full: "From $599",
+  },
+
+  // The Noon Guarantee
+  guarantee: {
+    short: "Gone by noon, or 20% off",
+    headline: "Booked by 8. Gone by noon.",
+    text: "When we're scheduled to arrive by 8 AM, your full load is hauled away by 12 noon, or you get 20% off your bill.",
+    fine: "Applies to jobs up to one full trailer load with an 8 AM or earlier arrival. Doesn't apply to delays outside our control, such as blocked access or items that aren't ready.",
   },
 
   towns: [
