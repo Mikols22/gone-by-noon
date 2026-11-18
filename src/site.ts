@@ -14,7 +14,7 @@ export const site = {
   // Contact — fill these in. Phone: digits only for the links, display for the text.
   phoneDisplay: "(215) 588-0541",
   phoneDigits: "2155880541",
-  email: "", // e.g. "quotes@gonebynoon.co" — shown in the footer once filled in
+  email: "hello@gonebynoon.co",
   hours: "", // e.g. "Mon–Sat, 7 AM–6 PM" — shown in the footer once filled in
   partnerCompany: "TW Homes",
 
