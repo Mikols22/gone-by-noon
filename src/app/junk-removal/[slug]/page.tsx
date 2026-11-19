@@ -51,8 +51,8 @@ export default async function TownPage({ params }: { params: Promise<{ slug: str
               <p>{t.local}</p>
               <p>
                 Text a photo of what&apos;s going to <a href={`sms:+1${site.phoneDigits}`}>{site.phoneDisplay}</a> and
-                we&apos;ll reply with an upfront price. Single items start at {site.prices.single.replace("From ", "")}, and bigger
-                jobs are priced by how much space they take on our trailer. {site.hours}.
+                we&apos;ll reply with an upfront price. Jobs are priced by how much space they take on our trailer, starting with a quarter load at{" "}
+                {site.prices.quarter.replace("From ", "")}. {site.hours}.
               </p>
             </div>
             <GuaranteeCard />

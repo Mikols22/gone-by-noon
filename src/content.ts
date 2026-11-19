@@ -118,7 +118,7 @@ export const services: Service[] = [
     name: "Furniture removal",
     title: "Furniture Removal in Doylestown & Bucks County, PA",
     description:
-      "Couch, sectional, dresser or a whole room of furniture hauled away from your Bucks County home. Upfront prices from $99. Book by 8, gone by noon.",
+      "Couch, sectional, dresser or a whole room of furniture hauled away from your Bucks County home. Upfront prices, no surprises. Book by 8, gone by noon.",
     h1: "Furniture removal in Bucks County",
     intro:
       "Old couch, broken recliner, a dresser nobody wants. We carry it out of any room in the house, load it on our trailer and haul it away. You don't lift a thing, and we sweep up before we leave.",
@@ -131,7 +131,7 @@ export const services: Service[] = [
       "Leave it where it is. Taking furniture out of the room is part of the price.",
     ],
     faqs: [
-      { q: "How much does couch removal cost in Bucks County?", a: "Single items start at $99, and a couch is priced by its size. Text a photo for an exact price. Labor, hauling and disposal are included." },
+      { q: "How much does couch removal cost in Bucks County?", a: "Our smallest job is a quarter load (from $240), which fits a few large items, like a couch, a mattress set and a dresser. Text a photo for an exact price. Labor, hauling and disposal are included." },
       { q: "Do I need to bring the furniture outside?", a: "No. We carry it out of whatever room it's in, including basements and second floors." },
       { q: "Can you take a whole room of furniture at once?", a: "Yes. For three or more large pieces we usually price by trailer space, which is cheaper than paying per item." },
     ],
@@ -154,7 +154,7 @@ export const services: Service[] = [
       "Washers should be unhooked and drained.",
     ],
     faqs: [
-      { q: "How much does it cost to get rid of an old refrigerator?", a: "Single items start at $99, and appliances are priced by size and type. Text a photo for an exact price, including hauling and disposal." },
+      { q: "How much does it cost to get rid of an old refrigerator?", a: "Our smallest job is a quarter load (from $240), which fits a few large items, like a couch, a mattress set and a dresser. Text a photo for an exact price. Hauling and disposal are included." },
       { q: "Can you disconnect my gas stove or dryer?", a: "No. Gas lines need to be capped by a licensed plumber or technician. Once it's disconnected, we'll take it from there." },
       { q: "Do you take appliances from basements?", a: "Yes. Basement washers, dryers, freezers and water heaters are common jobs for us." },
     ],
@@ -176,7 +176,7 @@ export const services: Service[] = [
       "We can take the frame apart if it won't fit down the stairs in one piece.",
     ],
     faqs: [
-      { q: "How much does mattress removal cost?", a: "Single items start at $99. Text a photo of the mattress, box spring or frame and we'll send an exact price." },
+      { q: "How much does mattress removal cost?", a: "Our smallest job is a quarter load (from $240), which fits a few large items, like a couch, a mattress set and a dresser. Text a photo for an exact price." },
       { q: "Do you take mattresses from upstairs bedrooms?", a: "Yes. We carry it out from wherever it is in the house." },
     ],
   },
@@ -367,15 +367,15 @@ export const towns: Town[] = [
     name: "Chalfont",
     title: "Junk Removal in Chalfont, PA | Gone by Noon",
     description:
-      "Junk removal in Chalfont Borough and nearby New Britain. Single items, cleanouts and debris hauled away by a local Bucks County crew.",
+      "Junk removal in Chalfont Borough and nearby New Britain. Furniture, cleanouts and debris hauled away by a local Bucks County crew.",
     intro:
       "We serve Chalfont Borough and the surrounding New Britain Township area, about ten minutes from our base in Doylestown.",
     local:
-      "From single items like an old couch or treadmill to whole-basement cleanouts, Chalfont jobs are quick for us to reach. Text a photo and we'll send a price back.",
+      "From a few pieces of old furniture to whole-basement cleanouts, Chalfont jobs are quick for us to reach. Text a photo and we'll send a price back.",
     popular: ["furniture-removal", "appliance-removal", "garage-cleanouts", "mattress-removal"],
     nearby: ["New Britain", "Doylestown", "Warrington", "Hatfield", "Perkasie"],
     faqs: [
-      { q: "Do you come to Chalfont for just one item?", a: "Yes. Single items start at $99." },
+      { q: "What's the smallest job you take?", a: "A quarter trailer load, from $240. That fits a few large items, so it's a good time to clear out anything else that's been waiting to go." },
       { q: "Do you serve New Britain too?", a: "Yes, both the Borough and New Britain Township." },
     ],
   },
@@ -405,11 +405,11 @@ export const towns: Town[] = [
     intro:
       "We serve all of Warminster Township, from the neighborhoods around Street Road to the areas bordering Warrington and Ivyland.",
     local:
-      "Warminster jobs run the range: single appliances, tenant turnovers, renovation debris and full-house cleanouts. Whatever the size, you get an upfront price before we lift anything.",
+      "Warminster jobs run the range: appliances, tenant turnovers, renovation debris and full-house cleanouts. Whatever the size, you get an upfront price before we lift anything.",
     popular: ["appliance-removal", "realtor-property-cleanouts", "construction-debris-removal", "furniture-removal"],
     nearby: ["Warrington", "Horsham", "Jamison", "Doylestown"],
     faqs: [
-      { q: "Do you serve Warminster for single items?", a: "Yes. Single items start at $99." },
+      { q: "What's the smallest job you take?", a: "A quarter trailer load, from $240. Bundle a few large items into one visit." },
       { q: "Can you help with a rental turnover?", a: "Yes. Landlords and property managers can text us the address and we'll handle it from there." },
     ],
   },

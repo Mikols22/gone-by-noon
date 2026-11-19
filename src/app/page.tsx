@@ -17,7 +17,7 @@ import {
 import { site, smsHref, telHref } from "@/site";
 
 const services = [
-  { Icon: SofaIcon, href: "/services/furniture-removal", title: "Furniture & appliances", text: "Couches, mattresses, fridges, washers, hot tubs. Single items or a whole room." },
+  { Icon: SofaIcon, href: "/services/furniture-removal", title: "Furniture & appliances", text: "Couches, mattresses, fridges, washers, hot tubs. A few pieces or a whole room." },
   { Icon: HouseIcon, href: "/services/estate-cleanouts", title: "Home & estate cleanouts", text: "Moving, downsizing or settling an estate. We clear it out so you can move forward." },
   { Icon: GarageIcon, href: "/services/garage-cleanouts", title: "Garage, basement & attic", text: "Years of boxes, old tools, broken toys. Get the space back in one morning." },
   { Icon: HammerIcon, href: "/services/construction-debris-removal", title: "Construction & reno debris", text: "Drywall, flooring, cabinets, light demo. We come from the building trade, so this is home turf." },
@@ -32,8 +32,7 @@ const steps = [
 ];
 
 const loads = [
-  { name: "Single item", fill: 8, price: site.prices.single, text: "One couch, mattress or appliance." },
-  { name: "Quarter load", fill: 25, price: site.prices.quarter, text: "A few large items or a small room's worth." },
+  { name: "Quarter load", fill: 25, price: site.prices.quarter, text: "A few large items, like a couch, mattress set and dresser. Our smallest job." },
   { name: "Half load", fill: 50, price: site.prices.half, text: "A typical garage or basement cleanout." },
   { name: "Full load", fill: 100, price: site.prices.full, text: "Whole-house, estate or construction cleanups.", dark: true },
 ];
@@ -41,7 +40,7 @@ const loads = [
 const faqs = [
   { q: "What do you take?", a: "Almost anything non-hazardous that two people can lift: furniture, appliances, electronics, boxes, yard waste, construction debris and more." },
   { q: "What can't you take?", a: "Hazardous materials like paint, chemicals, fuel, propane tanks, asbestos and medical waste." },
-  { q: "How does pricing work?", a: "Single items have a set price. Bigger jobs are priced by how much space they take on our trailer. Labor, hauling and disposal are included, and we confirm the price on site before we start." },
+  { q: "How does pricing work?", a: "Every job is priced by how much space it takes on our trailer, starting with a quarter load. Labor, hauling and disposal are included, and we confirm the price on site before we start." },
   { q: "Do I need to be home?", a: "Not always. If the items are outside or easy to get to, we can handle it while you're out and text you photos when it's done." },
   { q: "When are you open?", a: `${site.hours}. Text a photo anytime and we'll reply during business hours.` },
   { q: "Is it really gone by noon?", a: `Yes. ${site.guarantee.text} ${site.guarantee.fine}` },
@@ -148,7 +147,7 @@ export default function Home() {
               Every price includes labor, loading, hauling and disposal. We confirm the final price on site before we
               start.
             </p>
-            <div className="grid grid-4">
+            <div className="grid grid-3">
               {loads.map((l) => (
                 <div key={l.name} className={`card price-card${l.dark ? " price-dark" : ""}`}>
                   <h3>{l.name}</h3>

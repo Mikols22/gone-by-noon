@@ -20,9 +20,8 @@ export const site = {
   openingHours: { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "07:00", closes: "16:00" },
   partnerCompany: "TW Homes",
 
-  // Pricing section. Single item comes from the price sheet's minimum visit charge.
+  // Pricing. Smallest job is a quarter load (no single-item pickups).
   prices: {
-    single: "From $99",
     quarter: "From $240",
     half: "From $480",
     full: "From $680",

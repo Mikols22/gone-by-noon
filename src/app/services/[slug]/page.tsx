@@ -81,7 +81,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="wrap">
             <p className="eyebrow">Upfront pricing</p>
             <h2 className="h2">What it costs</h2>
-            <p className="section-lead">{SHOW_ITEM_PRICES || !s.priceItems.length || s.photoQuoteOnly ? `${s.priceNote} ` : "Single items start at $99. For bigger jobs, you pay for the space your load takes on our trailer. "}Labor, loading, hauling and disposal are always included.</p>
+            <p className="section-lead">{SHOW_ITEM_PRICES || !s.priceItems.length || s.photoQuoteOnly ? `${s.priceNote} ` : "You pay for the space your load takes on our trailer. Our smallest job is a quarter load, which fits a few large items. "}Labor, loading, hauling and disposal are always included.</p>
             {s.photoQuoteOnly && !SHOW_ITEM_PRICES ? null : prices.length > 0 ? (
               <div className="price-tables">
                 <table className="price-table">
@@ -96,7 +96,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <div className="price-tables">
                 <table className="price-table">
                   <tbody>
-                    {s.priceItems.length > 0 && <tr><td>Single item</td><td>{site.prices.single}</td></tr>}
                     <tr><td>Quarter trailer load</td><td>{site.prices.quarter}</td></tr>
                     <tr><td>Half trailer load</td><td>{site.prices.half}</td></tr>
                     <tr><td>Full trailer load</td><td>{site.prices.full}</td></tr>

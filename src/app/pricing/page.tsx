@@ -6,7 +6,7 @@ import { site } from "@/site";
 
 const title = "Junk Removal Prices in Bucks County, PA | Gone by Noon";
 const description =
-  "Upfront junk removal prices for Doylestown and central Bucks County: single items from $99, quarter loads from $240, half loads from $480, full loads from $680.";
+  "Upfront junk removal prices for Doylestown and central Bucks County: quarter loads from $240, half loads from $480, full loads from $680.";
 
 export const metadata: Metadata = {
   title,
@@ -18,17 +18,15 @@ export const metadata: Metadata = {
 const num = (s: string) => Number(s.replace(/[^0-9]/g, ""));
 
 const loads = [
-  { name: "Single item", price: site.prices.single, text: "One couch, mattress or appliance." },
-  { name: "Quarter load", price: site.prices.quarter, text: "A few large items or a small room's worth." },
+  { name: "Quarter load", price: site.prices.quarter, text: "A few large items, like a couch, mattress set and dresser. Our smallest job." },
   { name: "Half load", price: site.prices.half, text: "A typical garage or basement cleanout." },
   { name: "Full load", price: site.prices.full, text: "Whole-house, estate or construction cleanups." },
 ];
 
 const faqs = [
-  { q: "How much does junk removal cost in Bucks County?", a: `Single items start at $${MIN_VISIT}. Bigger jobs are priced by trailer space: a quarter load from ${site.prices.quarter.replace("From ", "")}, a half load from ${site.prices.half.replace("From ", "")} and a full load from ${site.prices.full.replace("From ", "")}.` },
+  { q: "How much does junk removal cost in Bucks County?", a: `Every job is priced by trailer space: a quarter load from ${site.prices.quarter.replace("From ", "")}, a half load from ${site.prices.half.replace("From ", "")} and a full load from ${site.prices.full.replace("From ", "")}.` },
   { q: "What's included in the price?", a: "Labor, carrying items out of the house, loading, hauling and disposal. We confirm the final price on site before we start." },
-  { q: "Is there a minimum charge?", a: `Yes, the minimum visit is $${MIN_VISIT}. That covers one small item or a few bags.` },
-  { q: "Do extra items cost less?", a: "Yes. Additional items on the same visit are discounted. For three or more large items we usually price by trailer space, which costs less." },
+  { q: "Do you pick up just one item?", a: "Our smallest job is a quarter trailer load, from $240. That fits a few large items, like a couch, a mattress set and a dresser, so it's worth bundling everything you want gone into one visit." },
 ];
 
 export default function PricingPage() {
@@ -63,9 +61,9 @@ export default function PricingPage() {
           <div className="wrap">
             <p className="eyebrow">Bigger jobs</p>
             <h2 className="h2">Priced by trailer space</h2>
-            <p className="section-lead">For cleanouts and three or more large items, you pay for how much room the load takes on our trailer. For one or two items, text a photo and we&apos;ll send an exact price.</p>
+            <p className="section-lead">For cleanouts and three or more large items, you pay for how much room the load takes on our trailer. Our smallest job is a quarter load. Text a photo and we&apos;ll tell you which size fits.</p>
             <p className="section-lead">We can&apos;t take paint, chemicals, fuel, propane tanks, asbestos or medical waste.</p>
-            <div className="grid grid-4">
+            <div className="grid grid-3">
               {loads.map((l) => (
                 <div key={l.name} className="card price-card">
                   <h3>{l.name}</h3>
