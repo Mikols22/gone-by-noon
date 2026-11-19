@@ -63,7 +63,7 @@ export default function AboutPage() {
               <li><CheckIcon size={22} /> An upfront price before we lift anything. No surprise fees.</li>
               <li><CheckIcon size={22} /> You only pay for the space your junk takes on our trailer.</li>
               <li><CheckIcon size={22} /> We carry everything out, load it and sweep up before we leave.</li>
-              <li><CheckIcon size={22} /> Book by 8, gone by noon, or 20% off.</li>
+              <li><CheckIcon size={22} /> Book by 8, gone by noon, or 20% off (half loads and smaller).</li>
               <li><CheckIcon size={22} /> Quotes by text: send a photo and get a price back.</li>
             </ul>
           </div>

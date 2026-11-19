@@ -31,8 +31,8 @@ export const site = {
   guarantee: {
     short: "Gone by noon, or 20% off",
     headline: "Booked by 8. Gone by noon.",
-    text: "When we're scheduled to arrive by 8 AM, your full load is hauled away by 12 noon, or you get 20% off your bill.",
-    fine: "Applies to jobs up to one full trailer load with an 8 AM or earlier arrival. Doesn't apply to delays outside our control, such as blocked access or items that aren't ready.",
+    text: "When we're scheduled to arrive by 8 AM, your half load or smaller is hauled away by 12 noon, or you get 20% off your bill.",
+    fine: "Applies to jobs up to a half trailer load with an 8 AM or earlier arrival. Bigger jobs get a time estimate up front. Doesn't apply to delays outside our control, such as blocked access or items that aren't ready.",
   },
 
   towns: [

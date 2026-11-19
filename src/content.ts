@@ -292,7 +292,7 @@ export const services: Service[] = [
     faqs: [
       { q: "Can you work from a lockbox?", a: "Yes. Send us the code and we'll text photos before and after." },
       { q: "Who pays the bill?", a: "Whoever you tell us to bill: the agency, the seller or the estate." },
-      { q: "How fast can you clear a listing?", a: "Book an 8 AM arrival and a full load is gone by noon, or 20% off the bill." },
+      { q: "How fast can you clear a listing?", a: "Book an 8 AM arrival and a half load or smaller is gone by noon, or 20% off the bill. Bigger cleanouts get a time estimate up front." },
     ],
   },
 ];
