@@ -6,7 +6,7 @@ import { site } from "@/site";
 
 const title = "Junk Removal Prices in Bucks County, PA | Gone by Noon";
 const description =
-  "Upfront junk removal prices for Doylestown and central Bucks County: quarter loads from $240, half loads from $480, full loads from $680.";
+  "Upfront junk removal prices for Doylestown and central Bucks County: quarter loads from $295, half loads from $575, full loads from $995.";
 
 export const metadata: Metadata = {
   title,
@@ -26,7 +26,7 @@ const loads = [
 const faqs = [
   { q: "How much does junk removal cost in Bucks County?", a: `Every job is priced by trailer space: a quarter load from ${site.prices.quarter.replace("From ", "")}, a half load from ${site.prices.half.replace("From ", "")} and a full load from ${site.prices.full.replace("From ", "")}.` },
   { q: "What's included in the price?", a: "Labor, carrying items out of the house, loading, hauling and disposal. We confirm the final price on site before we start." },
-  { q: "Do you pick up just one item?", a: "Our smallest job is a quarter trailer load, from $240. That fits a few large items, like a couch, a mattress set and a dresser, so it's worth bundling everything you want gone into one visit." },
+  { q: "Do you pick up just one item?", a: "Our smallest job is a quarter trailer load, from $295. That fits a few large items, like a couch, a mattress set and a dresser, so it's worth bundling everything you want gone into one visit." },
 ];
 
 export default function PricingPage() {

@@ -22,9 +22,9 @@ export const site = {
 
   // Pricing. Smallest job is a quarter load (no single-item pickups).
   prices: {
-    quarter: "From $240",
-    half: "From $480",
-    full: "From $680",
+    quarter: "From $295",
+    half: "From $575",
+    full: "From $995",
   },
 
   // The Noon Guarantee

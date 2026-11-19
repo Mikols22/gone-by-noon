@@ -131,7 +131,7 @@ export const services: Service[] = [
       "Leave it where it is. Taking furniture out of the room is part of the price.",
     ],
     faqs: [
-      { q: "How much does couch removal cost in Bucks County?", a: "Our smallest job is a quarter load (from $240), which fits a few large items, like a couch, a mattress set and a dresser. Text a photo for an exact price. Labor, hauling and disposal are included." },
+      { q: "How much does couch removal cost in Bucks County?", a: "Our smallest job is a quarter load (from $295), which fits a few large items, like a couch, a mattress set and a dresser. Text a photo for an exact price. Labor, hauling and disposal are included." },
       { q: "Do I need to bring the furniture outside?", a: "No. We carry it out of whatever room it's in, including basements and second floors." },
       { q: "Can you take a whole room of furniture at once?", a: "Yes. For three or more large pieces we usually price by trailer space, which is cheaper than paying per item." },
     ],
@@ -154,7 +154,7 @@ export const services: Service[] = [
       "Washers should be unhooked and drained.",
     ],
     faqs: [
-      { q: "How much does it cost to get rid of an old refrigerator?", a: "Our smallest job is a quarter load (from $240), which fits a few large items, like a couch, a mattress set and a dresser. Text a photo for an exact price. Hauling and disposal are included." },
+      { q: "How much does it cost to get rid of an old refrigerator?", a: "Our smallest job is a quarter load (from $295), which fits a few large items, like a couch, a mattress set and a dresser. Text a photo for an exact price. Hauling and disposal are included." },
       { q: "Can you disconnect my gas stove or dryer?", a: "No. Gas lines need to be capped by a licensed plumber or technician. Once it's disconnected, we'll take it from there." },
       { q: "Do you take appliances from basements?", a: "Yes. Basement washers, dryers, freezers and water heaters are common jobs for us." },
     ],
@@ -176,7 +176,7 @@ export const services: Service[] = [
       "We can take the frame apart if it won't fit down the stairs in one piece.",
     ],
     faqs: [
-      { q: "How much does mattress removal cost?", a: "Our smallest job is a quarter load (from $240), which fits a few large items, like a couch, a mattress set and a dresser. Text a photo for an exact price." },
+      { q: "How much does mattress removal cost?", a: "Our smallest job is a quarter load (from $295), which fits a few large items, like a couch, a mattress set and a dresser. Text a photo for an exact price." },
       { q: "Do you take mattresses from upstairs bedrooms?", a: "Yes. We carry it out from wherever it is in the house." },
     ],
   },
@@ -209,7 +209,7 @@ export const services: Service[] = [
     name: "Garage & basement cleanouts",
     title: "Garage, Basement & Attic Cleanouts | Bucks County, PA",
     description:
-      "Garage, basement and attic cleanouts in Doylestown and central Bucks County. Priced by trailer space, from $240 for a quarter load. Done in one morning.",
+      "Garage, basement and attic cleanouts in Doylestown and central Bucks County. Priced by trailer space, from $295 for a quarter load. Done in one morning.",
     h1: "Garage, basement and attic cleanouts",
     intro:
       "Years of boxes, broken bikes, old tools and things nobody remembers buying. Point at what's going and we'll load it all, haul it away and sweep the floor, usually in a single morning.",
@@ -222,7 +222,7 @@ export const services: Service[] = [
       "Want to keep the car out of the driveway tonight? Book a morning slot.",
     ],
     faqs: [
-      { q: "How much does a garage cleanout cost?", a: "Most garages and basements are a quarter load (from $240) or a half load (from $480). Send a photo for an exact price." },
+      { q: "How much does a garage cleanout cost?", a: "Most garages and basements are a quarter load (from $295) or a half load (from $575). Send a photo for an exact price." },
       { q: "Do I need to sort things first?", a: "No. Show us what you're keeping and we take everything else." },
       { q: "Can you take old paint and chemicals?", a: "No. Paint, chemicals, fuel and propane need to go to a household hazardous waste collection event." },
     ],
@@ -238,14 +238,14 @@ export const services: Service[] = [
       "Clearing out a parent's home or downsizing is hard enough. We handle the heavy part carefully and on your schedule: furniture, appliances, closets, basements and everything in between, so the house is ready to sell or hand over.",
     take: ["Furniture and appliances throughout the house", "Closets, cabinets and contents", "Basements, attics and garages", "Sheds and outdoor items", "Everything left after family has taken what they want"],
     priceItems: [],
-    priceNote: "Whole-house jobs are priced by trailer loads. A full load starts at $680, and we'll tell you how many loads to expect after seeing photos or a quick walkthrough.",
+    priceNote: "Whole-house jobs are priced by trailer loads. A full load starts at $995, and we'll tell you how many loads to expect after seeing photos or a quick walkthrough.",
     goodToKnow: [
       "Mark or remove anything the family is keeping before we start.",
       "Not local? We can work with a realtor or neighbor who lets us in, and text you photos when the house is clear.",
       "We can work in stages if the family needs time to go through things.",
     ],
     faqs: [
-      { q: "How much does an estate cleanout cost?", a: "It depends on how much is in the house. Each full trailer load starts at $680. Send photos of each room and we'll give you an upfront price." },
+      { q: "How much does an estate cleanout cost?", a: "It depends on how much is in the house. Each full trailer load starts at $995. Send photos of each room and we'll give you an upfront price." },
       { q: "Do I need to be there?", a: "No. Many families live out of the area. Someone just needs to let us in, and we'll send photos when it's done." },
       { q: "Can you clear the house before a listing goes live?", a: "Yes. Tell us the listing date and we'll schedule around it." },
     ],
@@ -261,7 +261,7 @@ export const services: Service[] = [
       "Our crew comes from TW Homes, a local home builder, so construction debris is home turf. Drywall, flooring, cabinets, tile and lumber, from a single bathroom remodel to a whole-house renovation. No dumpster sitting in your driveway for a week.",
     take: ["Drywall and plaster", "Flooring and carpet", "Cabinets and countertops", "Tile and lumber", "Doors, windows and trim", "Old decks and fencing (ask for a quote)"],
     priceItems: [],
-    priceNote: "Debris is priced by trailer space. A small bathroom remodel is often a quarter load (from $240). Very heavy material like concrete or brick is priced on site.",
+    priceNote: "Debris is priced by trailer space. A small bathroom remodel is often a quarter load (from $295). Very heavy material like concrete or brick is priced on site.",
     goodToKnow: [
       "Pile debris in one spot if you can. It makes loading faster.",
       "We can't take asbestos, lead paint abatement waste or chemicals.",
@@ -359,7 +359,7 @@ export const towns: Town[] = [
     nearby: ["Doylestown", "Jamison", "Warminster", "Chalfont", "Horsham"],
     faqs: [
       { q: "Do you serve all of Warrington Township?", a: "Yes, including the neighborhoods off Route 611 and Bristol Road." },
-      { q: "What does a typical garage cleanout cost?", a: "Most garages are a quarter load (from $240) or a half load (from $480)." },
+      { q: "What does a typical garage cleanout cost?", a: "Most garages are a quarter load (from $295) or a half load (from $575)." },
     ],
   },
   {
@@ -375,7 +375,7 @@ export const towns: Town[] = [
     popular: ["furniture-removal", "appliance-removal", "garage-cleanouts", "mattress-removal"],
     nearby: ["New Britain", "Doylestown", "Warrington", "Hatfield", "Perkasie"],
     faqs: [
-      { q: "What's the smallest job you take?", a: "A quarter trailer load, from $240. That fits a few large items, so it's a good time to clear out anything else that's been waiting to go." },
+      { q: "What's the smallest job you take?", a: "A quarter trailer load, from $295. That fits a few large items, so it's a good time to clear out anything else that's been waiting to go." },
       { q: "Do you serve New Britain too?", a: "Yes, both the Borough and New Britain Township." },
     ],
   },
@@ -409,7 +409,7 @@ export const towns: Town[] = [
     popular: ["appliance-removal", "realtor-property-cleanouts", "construction-debris-removal", "furniture-removal"],
     nearby: ["Warrington", "Horsham", "Jamison", "Doylestown"],
     faqs: [
-      { q: "What's the smallest job you take?", a: "A quarter trailer load, from $240. Bundle a few large items into one visit." },
+      { q: "What's the smallest job you take?", a: "A quarter trailer load, from $295. Bundle a few large items into one visit." },
       { q: "Can you help with a rental turnover?", a: "Yes. Landlords and property managers can text us the address and we'll handle it from there." },
     ],
   },
