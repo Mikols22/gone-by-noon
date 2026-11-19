@@ -1,6 +1,6 @@
 // /llms.txt — a plain-text summary of the business for AI assistants (ChatGPT, Claude, Perplexity, etc.).
 // Built from site.ts and content.ts, so it stays in sync with the website.
-import { priceLabel, priceList, services, towns } from "@/content";
+import { SHOW_ITEM_PRICES, priceLabel, priceList, services, towns } from "@/content";
 import { site } from "@/site";
 
 export const dynamic = "force-static";
@@ -27,7 +27,8 @@ export function GET() {
     `- Quarter trailer load: ${site.prices.quarter}`,
     `- Half trailer load: ${site.prices.half}`,
     `- Full trailer load: ${site.prices.full}`,
-    ...priceList.flatMap((c) => c.items.map((i) => `- ${i.name}: ${priceLabel(i.from)}`)),
+    ...(SHOW_ITEM_PRICES ? priceList : []).flatMap((c) => c.items.map((i) => `- ${i.name}: ${priceLabel(i.from)}`)),
+    `- One or two items: text a photo for an exact price.`,
     `- Full price list: ${site.url}/pricing`,
     "",
     "## Services",

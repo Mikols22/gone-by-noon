@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS_ID, CtaBand, FaqSection, JsonLd, PageHero, SiteFooter, SiteHeader } from "@/components/Chrome";
-import { MIN_VISIT, priceLabel, priceList, services } from "@/content";
+import { MIN_VISIT, SHOW_ITEM_PRICES, priceLabel, priceList, services } from "@/content";
 import { site } from "@/site";
 
 const title = "Junk Removal Prices in Bucks County, PA | Gone by Noon";
@@ -39,7 +39,7 @@ export default function PricingPage() {
     url: `${site.url}/pricing`,
     itemListElement: [
       ...loads.map((l) => ({ "@type": "Offer", name: l.name, priceCurrency: "USD", price: num(l.price), description: `${l.text} Starting price.`, seller: { "@id": BUSINESS_ID } })),
-      ...priceList.flatMap((c) =>
+      ...(SHOW_ITEM_PRICES ? priceList : []).flatMap((c) =>
         c.items
           .filter((i) => i.from !== null)
           .map((i) => ({ "@type": "Offer", name: `${i.name} removal`, category: c.category, priceCurrency: "USD", price: i.from === "min" ? MIN_VISIT : i.from, seller: { "@id": BUSINESS_ID } })),
@@ -63,7 +63,8 @@ export default function PricingPage() {
           <div className="wrap">
             <p className="eyebrow">Bigger jobs</p>
             <h2 className="h2">Priced by trailer space</h2>
-            <p className="section-lead">For cleanouts and three or more large items, you pay for how much room the load takes on our trailer.</p>
+            <p className="section-lead">For cleanouts and three or more large items, you pay for how much room the load takes on our trailer. For one or two items, text a photo and we&apos;ll send an exact price.</p>
+            <p className="section-lead">We can&apos;t take paint, chemicals, fuel, propane tanks, asbestos or medical waste.</p>
             <div className="grid grid-4">
               {loads.map((l) => (
                 <div key={l.name} className="card price-card">
@@ -76,6 +77,7 @@ export default function PricingPage() {
           </div>
         </section>
 
+        {SHOW_ITEM_PRICES && (
         <section className="section">
           <div className="wrap">
             <p className="eyebrow">Single items</p>
@@ -100,6 +102,8 @@ export default function PricingPage() {
             </p>
           </div>
         </section>
+
+        )}
 
         <FaqSection faqs={faqs} title="Pricing questions" />
 

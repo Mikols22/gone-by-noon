@@ -9,6 +9,8 @@ export type Faq = { q: string; a: string };
 // ── Single-item prices ──
 // Working prices from the Nov 2026 price sheet (to review with Randy).
 // null = priced on site. "min" = the minimum visit charge (site.prices.single).
+// HIDDEN for now: set SHOW_ITEM_PRICES to true to show this list on the site again.
+export const SHOW_ITEM_PRICES = false;
 export const MIN_VISIT = 99;
 export type PriceItem = { name: string; from: number | "min" | null };
 export const priceList: { category: string; items: PriceItem[] }[] = [
@@ -105,6 +107,7 @@ export type Service = {
   take: string[]; // what we take
   priceItems: string[]; // names from priceList shown on the page
   priceNote: string;
+  photoQuoteOnly?: boolean; // no price table; priced from a photo
   goodToKnow: string[];
   faqs: Faq[];
 };
@@ -128,7 +131,7 @@ export const services: Service[] = [
       "Leave it where it is. Taking furniture out of the room is part of the price.",
     ],
     faqs: [
-      { q: "How much does couch removal cost in Bucks County?", a: "A standard sofa starts at $139. A loveseat or recliner starts at $119, and a sectional starts at $275. Labor, hauling and disposal are included." },
+      { q: "How much does couch removal cost in Bucks County?", a: "Single items start at $99, and a couch is priced by its size. Text a photo for an exact price. Labor, hauling and disposal are included." },
       { q: "Do I need to bring the furniture outside?", a: "No. We carry it out of whatever room it's in, including basements and second floors." },
       { q: "Can you take a whole room of furniture at once?", a: "Yes. For three or more large pieces we usually price by trailer space, which is cheaper than paying per item." },
     ],
@@ -151,7 +154,7 @@ export const services: Service[] = [
       "Washers should be unhooked and drained.",
     ],
     faqs: [
-      { q: "How much does it cost to get rid of an old refrigerator?", a: "A standard refrigerator starts at $135 and a large side-by-side or French-door model starts at $165, including hauling and disposal." },
+      { q: "How much does it cost to get rid of an old refrigerator?", a: "Single items start at $99, and appliances are priced by size and type. Text a photo for an exact price, including hauling and disposal." },
       { q: "Can you disconnect my gas stove or dryer?", a: "No. Gas lines need to be capped by a licensed plumber or technician. Once it's disconnected, we'll take it from there." },
       { q: "Do you take appliances from basements?", a: "Yes. Basement washers, dryers, freezers and water heaters are common jobs for us." },
     ],
@@ -161,7 +164,7 @@ export const services: Service[] = [
     name: "Mattress removal",
     title: "Mattress & Box Spring Removal in Bucks County, PA",
     description:
-      "Mattress, box spring and bed frame removal in Doylestown and central Bucks County. Any size from $109. We carry it out, you don't lift a thing.",
+      "Mattress, box spring and bed frame removal in Doylestown and central Bucks County. Any size, upfront price. We carry it out, you don't lift a thing.",
     h1: "Mattress removal in Bucks County",
     intro:
       "Mattresses are awkward to move and most curbside trash pickups won't take them. We carry them down the stairs and out the door, along with the box spring and frame if you need those gone too.",
@@ -173,7 +176,7 @@ export const services: Service[] = [
       "We can take the frame apart if it won't fit down the stairs in one piece.",
     ],
     faqs: [
-      { q: "How much does mattress removal cost?", a: "A mattress of any size starts at $109. A mattress and box spring set starts at $159." },
+      { q: "How much does mattress removal cost?", a: "Single items start at $99. Text a photo of the mattress, box spring or frame and we'll send an exact price." },
       { q: "Do you take mattresses from upstairs bedrooms?", a: "Yes. We carry it out from wherever it is in the house." },
     ],
   },
@@ -182,20 +185,21 @@ export const services: Service[] = [
     name: "Hot tub removal",
     title: "Hot Tub & Spa Removal in Bucks County, PA",
     description:
-      "Hot tub and spa removal in Doylestown and central Bucks County. We cut it down, load it and haul it away, starting at $450.",
+      "Hot tub and spa removal in Doylestown and central Bucks County. We cut it down, load it and haul it away. Upfront price from a photo.",
     h1: "Hot tub removal in Bucks County",
     intro:
       "An old hot tub is one of the hardest things to get rid of yourself. They're heavy, they rarely fit through a gate in one piece, and nobody wants them. Our crew comes from a working construction company, so we bring the tools to cut it down, load it and leave the area clean.",
     take: ["Above-ground hot tubs and spas", "Swim spas (priced on site)", "Hot tub covers, steps and surrounds", "Old decking around the tub (ask for a quote)"],
     priceItems: ["Hot tub"],
-    priceNote: "Most standard hot tubs start at $450. Large swim spas, tubs on a deck or tubs with tight access are priced after we see a photo.",
+    photoQuoteOnly: true,
+    priceNote: "Every hot tub is different, so we price it from a photo of the tub and the path to the driveway.",
     goodToKnow: [
       "Drain the tub a day or two before we arrive.",
       "The power needs to be shut off and disconnected by an electrician before removal.",
       "Send a photo that shows the tub and the path to the driveway. That's how we price it.",
     ],
     faqs: [
-      { q: "How much does hot tub removal cost in Bucks County?", a: "Standard hot tubs start at $450, including cutting it down, hauling and disposal. Swim spas and hard-to-reach tubs are priced from a photo." },
+      { q: "How much does hot tub removal cost in Bucks County?", a: "It depends on the size and how easy it is to reach. Text a photo and we'll send an upfront price that includes cutting it down, hauling and disposal." },
       { q: "Do I need to drain and disconnect it first?", a: "Yes. Drain it ahead of time and have an electrician disconnect the power. We handle the rest." },
       { q: "Can you remove the deck around it too?", a: "Often, yes. Include the deck in your photo and we'll price both together." },
     ],
@@ -337,7 +341,7 @@ export const towns: Town[] = [
     popular: ["garage-cleanouts", "hot-tub-removal", "estate-cleanouts", "construction-debris-removal"],
     nearby: ["Doylestown", "Furlong", "Lahaska", "New Hope", "Warrington"],
     faqs: [
-      { q: "Do you take sheds and playsets?", a: "Yes. Playsets start at $375. Sheds are priced from a photo." },
+      { q: "Do you take sheds and playsets?", a: "Yes. Playsets and sheds are priced from a photo." },
       { q: "Do you serve Lahaska and Holicong?", a: "Yes. Both are part of Buckingham Township and in our regular area." },
     ],
   },

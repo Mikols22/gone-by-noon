@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CheckIcon } from "@/components/Icons";
 import { BUSINESS_ID, CtaBand, FaqSection, GuaranteeCard, JsonLd, PageHero, SiteFooter, SiteHeader } from "@/components/Chrome";
-import { findPrice, priceLabel, serviceBySlug, services, towns } from "@/content";
+import { SHOW_ITEM_PRICES, findPrice, priceLabel, serviceBySlug, services, towns } from "@/content";
 import { site } from "@/site";
 
 export const dynamicParams = false;
@@ -30,7 +30,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const s = serviceBySlug(slug);
   if (!s) notFound();
 
-  const prices = s.priceItems.map((n) => findPrice(n)).filter((p) => p !== undefined);
+  const prices = SHOW_ITEM_PRICES ? s.priceItems.map((n) => findPrice(n)).filter((p) => p !== undefined) : [];
   const lowest = prices.map((p) => (p.from === "min" ? 99 : p.from)).filter((n): n is number => typeof n === "number");
 
   const serviceLd = {
@@ -81,8 +81,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="wrap">
             <p className="eyebrow">Upfront pricing</p>
             <h2 className="h2">What it costs</h2>
-            <p className="section-lead">{s.priceNote} Labor, loading, hauling and disposal are always included.</p>
-            {prices.length > 0 ? (
+            <p className="section-lead">{SHOW_ITEM_PRICES || !s.priceItems.length || s.photoQuoteOnly ? `${s.priceNote} ` : "Single items start at $99. For bigger jobs, you pay for the space your load takes on our trailer. "}Labor, loading, hauling and disposal are always included.</p>
+            {s.photoQuoteOnly && !SHOW_ITEM_PRICES ? null : prices.length > 0 ? (
               <div className="price-tables">
                 <table className="price-table">
                   <tbody>
@@ -96,6 +96,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <div className="price-tables">
                 <table className="price-table">
                   <tbody>
+                    {s.priceItems.length > 0 && <tr><td>Single item</td><td>{site.prices.single}</td></tr>}
                     <tr><td>Quarter trailer load</td><td>{site.prices.quarter}</td></tr>
                     <tr><td>Half trailer load</td><td>{site.prices.half}</td></tr>
                     <tr><td>Full trailer load</td><td>{site.prices.full}</td></tr>

@@ -158,7 +158,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="more-links"><Link href="/pricing">See prices for 50+ single items →</Link></p>
+            <p className="more-links"><Link href="/pricing">More on pricing →</Link></p>
           </div>
         </section>
 
